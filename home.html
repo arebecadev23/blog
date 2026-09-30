@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Blog</title>
+</head>
+
+<body>
+
+    <h1>Meu Blog</h1>
+
+    {% for post in posts %}
+
+        <article>
+            <h2>{{ post.titulo }}</h2>
+
+            <p>{{ post.conteudo }}</p>
+
+            <small>
+                Publicado em {{ post.data_criacao }}
+            </small>
+        </article>
+
+        <hr>
+
+    {% empty %}
+
+        <p>Nenhum post publicado ainda.</p>
+
+    {% endfor %}
+
+</body>
+</html>
